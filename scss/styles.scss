@@ -1,0 +1,223 @@
+@import "base";
+@import "reset";
+
+body {
+
+  background: url("../portfolio/img/background.jpg") center center / cover;
+}
+
+/*container du body*/
+
+.container {
+  display: grid;
+  grid:
+"header header" 200px
+"aside main" 1fr
+/ 300px 1fr;
+  max-height: 100vh;
+}
+
+/*header*/
+
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 500px 1fr 200px 50px;
+
+  h1 {
+    font-size: 6rem;
+    margin: auto 0 auto 4rem;
+    padding: 6rem 0;
+    color: var(--text);
+    text-shadow: var(--text-shadow);
+  }
+
+}
+
+/*aside*/
+
+aside {
+  grid-area: aside;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 6rem;
+
+    a {
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.main-container {
+  grid-area: main;
+  display: flex;
+  padding: 15rem 0;
+
+
+  .card {
+    margin: var(--m-card);
+    border: var(--bord-card);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    width: 870px;
+    justify-content: space-around;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+
+    h2 {
+      display: flex;
+      margin: 1rem auto 1rem Auto;
+      font-size: 3rem;
+      justify-content: center;
+      border-bottom: 1px solid var(--text);
+      width: 10rem;
+    }
+
+    .card-index {
+
+      .paragraphe {
+        font-size: 2rem;
+        margin: 2rem 0.5rem;
+        text-align: justify;
+      }
+    }
+
+    .card-skill {
+      margin: 2rem;
+
+      .skill {
+        .bar-skill {
+          position: relative;
+          background: var(--bar-skill);
+          width: 200px;
+          height: 5px;
+
+
+          &-progress {
+            position: absolute;
+            background: var(--bar-progress);
+
+            &-1 {
+
+              width: 90%;
+              height: 5px;
+            }
+
+            &-2 {
+
+              width: 90%;
+              height: 5px;
+            }
+
+            &-3 {
+
+              width: 90%;
+              height: 5px;
+            }
+
+            &-4 {
+
+              width: 10%;
+              height: 5px;
+            }
+          }
+
+          .bar-skill-dot {
+            position: absolute;
+            background: var(--bar-progress-dark);
+            top: -2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+
+            &-1 {
+              left: calc(200px - 10% - 5px);
+
+            }
+
+            &-2 {
+
+              left: calc(200px - 10% - 5px);
+
+            }
+
+            &-3 {
+
+              left: calc(200px - 10% - 5px);
+
+            }
+
+            &-4 {
+
+              left: calc(200px - 90% - 5px);
+
+            }
+          }
+        }
+
+        h4 {
+          padding: 1rem 0;
+        }
+      }
+
+    }
+
+    .card-exp {
+      margin: 2rem 2rem 2rem 5rem;
+
+
+      .exp-container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0.5rem;
+
+
+        i {
+          flex-basis: 1rem;
+          font-size: 1rem;
+          margin-right: 1rem;
+        }
+
+        p {
+          flex: auto;
+          margin: 0.5rem 0;
+        }
+        input{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .card-projet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      a {
+        font-size: 2rem;
+        margin: 0.5rem 0;
+      }
+    }
+
+    @keyframes myAnim {
+      0% {
+        opacity: 0;
+        transform: translateX(250px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+
+

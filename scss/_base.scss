@@ -1,0 +1,19 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+/*  font-family: var(--font-family);*/
+  color: var(--text);
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
